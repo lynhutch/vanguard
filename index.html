@@ -15,74 +15,81 @@
 
 <body>
 <!-- WRAP CONTENT IN VALIDATED, SEMANTIC HTML5 (SEE HINTS FOLDER LINKED TO IN THE CANVAS INSTRUCTIONS)-->
-    <header>
+    <header id="top">
         <h1>Vanguard</h1>
             <!-- Main Navigation -->
         <nav>
+            <h2>Main Navigation</h2>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle"><span></span></label>
             <ul>
-                <li><a>About</a></li>
-                <li><a>Services</a></li>
-                <li><a>Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section>
-            <h2>Innovation & Investment</h2>
+        <div id="innovation">
+            <div class="container">
+                <h2>Innovation & Investment</h2>
 
-            <p>We empower businesses to lead the future with high-impact strategies, market intelligence, and financial solutions that drive success.</p>
+                <p>We empower businesses to lead the future with high-impact strategies, market intelligence, and financial solutions that drive success.</p>
 
-            <p><a>Request a Consultation</a></p>
-        </section>
+                <p><a>Request a Consultation</a></p>
+            </div>
+        </div>
         
-        <section>
+        <div class="container" id="about">
             <h2>Our Expertise. Your Edge.</h2>
 
             <p>We redefine success by leveraging AI-driven analytics, market intelligence, and high-yield investment strategies to propel businesses forward. Whether you're looking to scale, optimize, or dominate, our strategic expertise delivers results.'</p>
-        </section>
+        </div>
 
-        <section>
+        <div class="container" id="services">
             <h2>What We Offer</h2>
 
-                <div>
-                    <h3>Strategic Growth Consulting</h3>
+                <div class="container">
+                    <section>
+                        <h3>Strategic Growth Consulting</h3>
 
-                    <p>Unlock new revenue streams and optimize market expansion strategies.</p>
+                        <p>Unlock new revenue streams and optimize market expansion strategies.</p>
+                    </section>
+
+                    <section>
+                        <h3>High-Impact Investment Solutions</h3>
+
+                        <p>Maximize returns with data-driven portfolio management.</p>
+                    </section>
+
+                    <section>
+                        <h3>Business Acceleration & Mergers</h3>
+
+                        <p>Identify opportunities for rapid growth and high-value acquisitions.</p>
+                    </section>
+
+                    <section>
+                        <h3>Digital Transformation</h3>
+
+                        <p>Stay at the forefront of industry advancements with AI, blockchain, and automation.</p>
+                    </section>
+
+                    <section>
+                        <h3>Exclusive Executive Advisory Services</h3>
+
+                        <p>Personalized insights and leadership support for C-suite executives and high-net-worth investors.</p>
+                    </section>
+
+                    <section>
+                        <h3>Corporate Innovation</h3>
+
+                        <p>Strategic implementation of new ideas, technologies, and processes to drive business growth, enhance competitive advantage, and adapt to evolving market demands.</p>
+                    </section>
                 </div>
+            </div>
 
-                <div>
-                    <h3>High-Impact Investment Solutions</h3>
-
-                    <p>Maximize returns with data-driven portfolio management.</p>
-                </div>
-
-                <div>
-                    <h3>Business Acceleration & Mergers</h3>
-
-                    <p>Identify opportunities for rapid growth and high-value acquisitions.</p>
-                </div>
-
-                <div>
-                    <h3>Digital Transformation</h3>
-
-                    <p>Stay at the forefront of industry advancements with AI, blockchain, and automation.</p>
-                </div>
-
-                <div>
-                    <h3>Exclusive Executive Advisory Services</h3>
-
-                    <p>Personalized insights and leadership support for C-suite executives and high-net-worth investors.</p>
-                </div>
-
-                <div>
-                    <h3>Corporate Innovation</h3>
-
-                    <p>Strategic implementation of new ideas, technologies, and processes to drive business growth, enhance competitive advantage, and adapt to evolving market demands.</p>
-                </div>
-        </section>
-
-        <section>
+        <div class="container" id="results">
             <h2>Proven Results</h2>
             <p>Our data-driven strategies have delivered outstanding ROI, leading to significant revenue growth.</p>
 
@@ -134,37 +141,39 @@
                         <div class="bar" data-year="2023" style="--height: 85%;"></div>
                         <div class="bar" data-year="2024" style="--height: 100%;"></div>
                     </div>
-        </section>
+            </div>
     </main>
 
     <footer>
-        <h2>Contact Us</h2>
+        <div class="container" id="contact">
+            <h2>Contact Us</h2>
 
-        <p>Want to take your business to the next level? Get in touch with our elite team today.</p>
+            <p>Want to take your business to the next level? Get in touch with our elite team today.</p>
 
-        <form>
-            <label for="fullName">Full Name</label>
-            <input type="text" id="fullName" name="fullname">
+            <form>
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullname">
 
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email">
 
-            <label for="companyName">Company Name</label>
-            <input type="text" id="companyName" name="companyName">
+                <label for="companyName">Company Name</label>
+                <input type="text" id="companyName" name="companyName">
 
-            <label for="industry">Industry</label>
-            <input type="text" id="industry" name="industry">
+                <label for="industry">Industry</label>
+                <input type="text" id="industry" name="industry">
 
-            <label for="comment">How can we help you?</label>
-            <textarea id="comment" rows="10" cols="30"></textarea>
+                <label for="comment">How can we help you?</label>
+                <textarea id="comment" rows="10" cols="30"></textarea>
 
-            <input type="submit" value="Submit">
-        </form>
+                <input type="submit" value="Submit">
+            </form>
 
-        <div>
-            <p>2025 Vanguard. All rights reserved.</p> 
-            <address>Email: info@vanguard.com</address> 
-            <address>Phone: 480.123.4567</address>
+            <div>
+                <p>2025 Vanguard. All rights reserved.</p> 
+                <address>Email: info@vanguard.com</address> 
+                <address>Phone: 480.123.4567</address>
+            </div>
         </div>
     </footer>
 </body>

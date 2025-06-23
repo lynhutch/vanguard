@@ -66,9 +66,148 @@ table {
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 
-body {
+body, header, main, footer {
     min-width: 400px;
     margin: 0 auto;
+    font-family: var(--font);
+}
+
+body{
+    line-height: 1.3rem;
+}
+
+h1 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--blue);
+    display: grid;
+    grid-column: 1/2;
+    padding: 2rem;
+}
+
+h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    padding-top: 1.5rem;
+}
+
+#about h2, #services h2, #results h2, #contact h2{
+    padding-left: 1rem;
+}
+
+h3{
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 2rem 0 0.5rem 1.5rem;
+}
+
+p{
+    padding-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+header{
+    background-color: var(--black);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+nav{
+    display: grid;
+    grid-column: 3/5;
+    justify-content: left;
+    padding-top: 0.7rem;
+}
+
+nav ul {
+    width: 100%;
+    margin:0;
+    padding:0;
+    list-style:none;
+    overflow:hidden;
+    text-align:center;
+    align-items: right;
+    max-height: 0;
+    color: var(--white);
+}
+
+nav h2 {
+    visibility:hidden;
+    height:1px;
+    padding: 0;
+}
+nav li a {
+    display:block;
+    font-family:sans-serif;
+    font-size:1.5rem;
+    padding:1rem;
+    text-transform:uppercase;
+    font-weight:bold;
+    text-decoration:none;
+    color: white;
+    transition: background-color .3s ease-in;
+}
+nav a:hover, nav input:hover {
+    background-color: var(--blue);
+}
+
+nav label {
+    cursor: pointer;
+    display: flex;
+    padding: 1.5rem;
+    user-select: none;
+}
+
+label span {
+    background-color: white;
+    display: flex;
+    height: .25rem;
+    position: relative;
+    transition: background-color .3s ease-out;
+    width: 2rem;
+}
+ 
+label span:before, label span:after {
+    background: white;
+    content: '';
+    display: flex;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: .75rem;
+}
+label span:after {
+    top: -.75rem;
+}
+input {
+    display:none;
+}
+
+input:checked ~ ul {
+    max-height: 500px;
+}
+
+#about{
+    padding-top: 1rem;
+}
+
+.container section{
+    background-color: var(--blue);
+    margin-bottom: 1rem;
+    color: var(--white);
+    border-radius: 8px;
+}
+
+section p{
+    padding: 0.7rem;
+}
+
+#services{
+    padding-bottom: 2rem;
 }
 
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
@@ -79,12 +218,13 @@ body {
 }
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
- {
+#innovation {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
     height: 80vh;
     display: grid;
     place-items: center;
     text-align: center;
+    color: var(--white);
     padding: 1rem;
     overflow: hidden;
 }
@@ -147,7 +287,7 @@ body {
 
 
 /* MEDIA QUERIES (MEDIUM) */ 
-
+@media screen and (min-width: 800px){
     #results {
         grid-template-columns: 1fr 1fr;
     }
@@ -162,5 +302,23 @@ body {
         width: 50%;
     }
 
+    nav ul {
+        overflow:visible;
+        position:absolute;
+        top: 1.5rem;
+        left:.5rem;
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+    }
+      nav li a {
+        display:inline-block;
+    }
+      label span, input {
+        display:none;
+      }
+}
 
 /* MEDIA QUERIES (LARGE) */
+@media screen and (min-width: 1024px){
+
+}
