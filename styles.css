@@ -86,10 +86,11 @@ h1 {
 }
 
 h2{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: bold;
     padding-bottom: 1rem;
     padding-top: 1.5rem;
+    animation: slide 1s;
 }
 
 #about h2, #services h2, #results h2, #contact h2{
@@ -97,9 +98,22 @@ h2{
 }
 
 h3{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     padding: 2rem 0 0.5rem 1.5rem;
+    animation: slide 1s;
+}
+
+@keyframes slide{
+    from{
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 p{
@@ -155,28 +169,25 @@ nav a:hover, nav input:hover {
 }
 
 nav label {
-    cursor: pointer;
     display: flex;
     padding: 1.5rem;
     user-select: none;
 }
 
 label span {
-    background-color: white;
+    background-color: var(--white);
     display: flex;
     height: .25rem;
     position: relative;
-    transition: background-color .3s ease-out;
     width: 2rem;
 }
  
 label span:before, label span:after {
-    background: white;
+    background: var(--white);
     content: '';
     display: flex;
     height: 100%;
     position: absolute;
-    transition: all .2s ease-out;
     width: 100%;
 }
 
@@ -196,15 +207,15 @@ input:checked ~ ul {
     max-height: 500px;
 }
 
-#innovation h2, #innovation p{
+/* #innovation h2, #innovation p{
     backdrop-filter: blur(4px);
-}
+} */
 
 #innovation p{
     padding-bottom: 2rem;
 }
 
-#innovation a{
+#innovation [href="#"]{
     background-color: var(--blue);
     border: 1px solid var(--blue);
     border-radius: 8px;
@@ -212,11 +223,14 @@ input:checked ~ ul {
     color: var(--white);
     font-weight: bold;
     padding: 0.8rem;
+    transition: width 1s, height 1s;
+    animation: slide 1s;
 }
 
-#innovation a:hover{
+#innovation [href="#"]:hover{
     background-color: var(--red);
     border-color: var(--red);
+    transform: scale(1.5, 1.5)
 }
 
 #about{
@@ -228,6 +242,15 @@ input:checked ~ ul {
     margin-bottom: 1rem;
     color: var(--white);
     border-radius: 8px;
+    transition: height 5s ease-in-out;
+}
+
+.container section:hover{
+    transform: translateY(-10px);
+}
+
+#services section h3{
+    font-size: 1.3rem;
 }
 
 section p{
@@ -305,8 +328,7 @@ input[type=submit]{
 
 input[type=submit]:hover{
     background-color: var(--red);
-    width: 103%;
-    height: 2.7rem;
+    transform: scale(103%, 101%);
     border-color: var(--red);
 }
 
@@ -388,7 +410,7 @@ h1::before {
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: ;
+    transition: height 1s;
     height: 0;
 }
 /* THIS ONE IS DONE FOR YOU */
