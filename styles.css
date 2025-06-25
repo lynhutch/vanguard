@@ -125,6 +125,7 @@ header{
     background-color: var(--black);
     display: flex;
     border-bottom: 2px solid var(--blue);
+    padding-bottom: 0;
 }
 
 nav{
@@ -140,7 +141,6 @@ nav ul {
     list-style:none;
     overflow:hidden;
     text-align:center;
-    align-items: right;
     max-height: 0;
     color: var(--white);
 }
@@ -207,9 +207,9 @@ input:checked ~ ul {
     max-height: 500px;
 }
 
-/* #innovation h2, #innovation p{
+#innovation h2, #innovation p{
     backdrop-filter: blur(4px);
-} */
+}
 
 #innovation p{
     padding-bottom: 2rem;
@@ -494,11 +494,6 @@ h1::before {
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 1rem;
-    }
-
-    #stats div:last-of-type{
-        display: grid;
-        grid-template-columns: 2/4;
     }
 
     #stats h3{
