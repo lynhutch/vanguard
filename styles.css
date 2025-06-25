@@ -80,9 +80,9 @@ h1 {
     font-size: 1.6rem;
     font-weight: bold;
     color: var(--blue);
-    display: grid;
-    grid-column: 1/2;
+    display: flex;
     padding: 2rem;
+    align-items: center;
 }
 
 h2{
@@ -109,15 +109,13 @@ p{
 
 header{
     background-color: var(--black);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    border-bottom: 2px solid var(--blue);
 }
 
 nav{
-    justify-items: end;
-    display: grid;
-    grid-column: 3/5;
-    justify-content: left;
+    justify-items: flex-end;
+    align-content: center;
     padding-top: 0.7rem;
 }
 
@@ -138,6 +136,7 @@ nav h2 {
     height:1px;
     padding: 0;
 }
+
 nav li a {
     display:block;
     font-family:sans-serif;
@@ -146,11 +145,13 @@ nav li a {
     text-transform:uppercase;
     font-weight:bold;
     text-decoration:none;
-    color: white;
+    color: var(--blue);
     transition: background-color .3s ease-in;
 }
+
 nav a:hover, nav input:hover {
     background-color: var(--blue);
+    color: var(--black);
 }
 
 nav label {
@@ -195,8 +196,12 @@ input:checked ~ ul {
     max-height: 500px;
 }
 
+#innovation h2, #innovation p{
+    backdrop-filter: blur(4px);
+}
+
 #innovation p{
-    margin-bottom: 0.5rem;
+    padding-bottom: 2rem;
 }
 
 #innovation a{
@@ -341,13 +346,29 @@ address a {
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
 h1::before {
     content: "";
-    
+    transform: translateY(0px) ;
+    animation: float 6s ease-in-out infinite;
     left:-.5rem;
     width: 3.75rem;
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
 
 }
+
+@keyframes float {
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(20px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;
@@ -411,13 +432,21 @@ h1::before {
         width: 50%;
     }
 
+    h1{
+        justify-content: flex-start;
+        padding-left: 3rem;
+        display: flex;
+    }
+
     nav ul {
-        overflow:visible;
-        position:absolute;
+        overflow: visible;
+        position: absolute;
         top: 1.5rem;
         left:.5rem;
-        display: grid;
-        grid-template-columns:1fr 1fr 1fr;
+        display: flex;
+        justify-content:flex-end;
+        margin-right: 2rem;
+        width: 95%;
     }
 
       nav li a {
