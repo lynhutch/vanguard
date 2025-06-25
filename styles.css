@@ -3,6 +3,7 @@
 /* IMPORTED FONTS*/
 /* /* IMPORT "INTER" FROM GOOGLE FONTS" */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 /* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/
 v2.0 | 20110126
@@ -172,6 +173,7 @@ nav label {
     display: flex;
     padding: 1.5rem;
     user-select: none;
+    
 }
 
 label span {
@@ -215,22 +217,22 @@ input:checked ~ ul {
     padding-bottom: 2rem;
 }
 
-#innovation [href="#"]{
+.btn-request{
+    display: inline-block;
     background-color: var(--blue);
-    border: 1px solid var(--blue);
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
     color: var(--white);
     font-weight: bold;
-    padding: 0.8rem;
-    transition: width 1s, height 1s;
-    animation: slide 1s;
+    padding: 1rem;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: slide 1s ease-in-out;
 }
 
-#innovation [href="#"]:hover{
+.btn-request:hover{
     background-color: var(--red);
-    border-color: var(--red);
-    transform: scale(1.5, 1.5)
+    transform: scale(1.05)
 }
 
 #about{
