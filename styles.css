@@ -245,7 +245,7 @@ input:checked ~ ul {
     transition: height 5s ease-in-out;
 }
 
-.container section:hover{
+#services section:hover{
     transform: translateY(-10px);
 }
 
